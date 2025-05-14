@@ -1,21 +1,132 @@
+/* Resetando margens e paddings e definindo uma fonte padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Para garantir que padding e border não afetem o tamanho dos elementos */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  line-height: 1.6;
 }
-  
+
+/* Estilo para o cabeçalho (barra de navegação) */
 header {
-    background-color: #8b71a0;
-    padding: 10px;
+  background-color: #8b71a0; /* Cor de fundo da barra */
+  padding: 15px 20px; /* Aumentei o padding para dar mais altura à barra */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar a barra */
 }
-  
+
+header nav {
+  display: flex; /* Usando flexbox para distribuir os links de navegação */
+  justify-content: space-around; /* Espaçamento entre os links */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
 nav a {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
+  color: white; /* Cor do texto dos links */
+  text-decoration: none; /* Remover o sublinhado */
+  font-size: 18px; /* Tamanho da fonte */
+  padding: 10px 15px; /* Espaçamento ao redor dos links */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
 }
-  
+
+nav a:hover {
+  background-color: #6f4e79; /* Cor de fundo ao passar o mouse sobre o link */
+  border-radius: 5px; /* Bordas arredondadas ao passar o mouse */
+}
+
+/* Estilo para a seção principal da página */
 main {
-    padding: 20px;
+  padding: 20px; /* Espaçamento interno */
+  max-width: 1200px; /* Limita a largura da área principal */
+  margin: 20px auto; /* Centraliza o conteúdo e adiciona margem superior/inferior */
+  background-color: white; /* Fundo branco para o conteúdo */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Títulos e parágrafos */
+h1, h2 {
+  color: #333; /* Cor do texto dos títulos */
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center; /* Centraliza o título principal */
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #555; /* Cor mais suave para os parágrafos */
+  margin-bottom: 15px;
+}
+
+/* Estilo para listas não ordenadas */
+ul {
+  list-style-type: none; /* Remove os pontos das listas */
+  padding-left: 20px; /* Adiciona um pequeno padding à esquerda */
+}
+
+ul li {
+  margin-bottom: 10px; /* Espaço entre os itens da lista */
+}
+
+/* Estilo para imagens */
+img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 5px; /* Bordas arredondadas para a imagem */
+}
+
+/* Tabela para comparações (no caso de normas) */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Garante que as bordas fiquem unidas */
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px 15px; /* Padding para as células da tabela */
+  text-align: left;
+  border: 1px solid #ddd; /* Bordas finas e suaves */
+}
+
+table th {
+  background-color: #8b71a0;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Cor alternada para as linhas da tabela */
+}
+
+/* Estilo para links adicionais, como no footer */
+footer {
+  background-color: #8b71a0;
+  padding: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Adicionando uma classe para personalizar o layout da página "Sobre" */
+.sobre img {
+  max-width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto; /* Centraliza a imagem */
 }
